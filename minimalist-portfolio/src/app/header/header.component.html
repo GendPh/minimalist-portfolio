@@ -1,0 +1,30 @@
+<header>
+  <figure class="cursor-pointer" routerLink="/">
+    <img src="../../assets/images/logo.svg" alt="Logo SVG">
+  </figure>
+  <div role="button" id="nav-toggle" #navBtnToggle (click)="toggleNavBar()"></div>
+  <nav class="md:block hidden">
+    <ul class="flex-row">
+      <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+        class="text-primary-Grayish-Dark-Blue hover:text-primary-Cyan transition-colors duration-300 small-text">home
+      </li>
+      <li routerLink="/projects" routerLinkActive="active"
+        class="text-primary-Grayish-Dark-Blue hover:text-primary-Cyan transition-colors duration-300 small-text">
+        portfolio</li>
+      <li routerLink="/contact" routerLinkActive="active"
+        class="text-primary-Grayish-Dark-Blue hover:text-primary-Cyan transition-colors duration-300 small-text">
+        contact me</li>
+    </ul>
+  </nav>
+</header>
+
+<nav id="mobile-nav" #navMobile>
+  <ul>
+    <li routerLink="/" routerLinkActive="text-primary-Cyan font-bold" [routerLinkActiveOptions]="{exact: true}"
+      (click)="closeNavBar()">home</li>
+    <li routerLink="/projects" routerLinkActive="text-primary-Cyan font-bold" (click)="closeNavBar()">portfolio</li>
+    <li routerLink="/contact" routerLinkActive="text-primary-Cyan font-bold" (click)="closeNavBar()">contact me</li>
+  </ul>
+</nav>
+
+<div class="bg-mobile-nav" (click)="closeNavBar()"></div>

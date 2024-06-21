@@ -1,0 +1,29 @@
+<main>
+
+  <!-- Section loading while waits for the projects -->
+  <section *ngIf="!projectsLoaded; else loadedProjects">
+    <article class="bg-primary-Dark-Blue">
+      <span class="loader project"></span>
+    </article>
+  </section>
+
+  <!-- Section with the projects if no error happens -->
+  <ng-template #loadedProjects>
+    <section *ngIf="!projectsError; else failedProjects" class="gap-[72px] grid">
+      <app-project-container *ngFor="let project of projects;let i = index" [GetProject]="project"
+        [GetProjectIndex]="i" />
+    </section>
+  </ng-template>
+
+  <!-- Section with the projects if an error happens -->
+  <ng-template #failedProjects>
+    <section>
+      <article class="text-center">
+        <h2>Failed to load projects</h2>
+        <p class="mt-10 text-balance description">There was an error loading the projects. Please try again later.</p>
+      </article>
+    </section>
+  </ng-template>
+
+  <app-contact-me-link />
+</main>

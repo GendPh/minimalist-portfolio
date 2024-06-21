@@ -1,0 +1,33 @@
+<article class="project" [style.animation-delay]="(index * 0.5) + 's'">
+
+  <figure>
+    <a data-lightbox="img mobile" class="md:hidden" href="{{project.img.mobile}}{{project.img.name}}@2x.jpg"
+      data-title="{{project.title}}">
+      <img src="{{project.img.mobile}}{{project.img.name}}@2x.jpg" alt="Manage Landing Page Preview" />
+    </a>
+
+    <a data-lightbox="img table" class="md:block hidden lg:hidden"
+      href="{{project.img.mobile}}{{project.img.name}}@2x.jpg" data-title="{{project.title}}">
+      <img src="{{project.img.tablet}}{{project.img.name}}@2x.jpg" alt="Manage Landing Page Preview" />
+    </a>
+
+    <a data-lightbox="img desktop" class="lg:block hidden" href="{{project.img.mobile}}{{project.img.name}}@2x.jpg"
+      data-title="{{project.title}}">
+      <img src="{{project.img.desktop}}{{project.img.name}}@2x.jpg" alt="Manage Landing Page Preview" />
+    </a>
+  </figure>
+
+  <div class="content">
+
+    <div class="mb-6 md:mb-8 lg:mb-[103px] line"></div>
+
+    <h2>{{project.title}}</h2>
+
+    <p class="my-6 md:my-8 text-start description">{{project.description}}</p>
+
+    <button [routerLink]="['/project',project.title]" class="button secondary">view project</button>
+    
+    <div class="mt-6 md:mt-12 lg:mt-[103px] line"></div>
+  </div>
+
+</article>

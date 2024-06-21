@@ -1,0 +1,66 @@
+<main>
+  <!-- Toast from library primeNg -->
+  <p-toast [breakpoints]="{ '920px': { width: '80%' } }" />
+
+  <section>
+    <div class="mb-6 line"></div>
+    <div class="grid lg:grid-cols-2">
+      <h2>Get in Touch</h2>
+      <div>
+        <p class="my-6 md:mt-0 description">
+          I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and
+          am
+          open to a wide range of opportunities. My preference would be to find a position in a company in London. But
+          I’m
+          also happy to hear about opportunities that don’t fit that description. I’m a hard-working and positive person
+          who
+          will always approach each task with a sense of purpose and attention to detail. Please do feel free to check
+          out
+          my online profiles below and get in touch using the form.
+        </p>
+        <div class="flex gap-4">
+          <img src="../../assets/images/icons/github.svg" alt="github svg" class="w-6 aspect-square">
+          <img src="../../assets/images/icons/twitter.svg" alt="twitter svg" class="w-6 aspect-square">
+          <img src="../../assets/images/icons/linkedin.svg" alt="linkedin svg" class="w-6 aspect-square">
+        </div>
+      </div>
+    </div>
+
+    <div class="my-8 line"></div>
+  </section>
+
+  <section class="grid lg:grid-cols-2 mb-20 md:mb-24">
+    <h2>Contact Me</h2>
+    <!-- Form for the client email -->
+    <form #registerForm="ngForm" (ngSubmit)="sendEmail($event)">
+      <!-- input for the client name -->
+      <div class="form-input lg:mt-0">
+        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="name" #nameModel="ngModel" name="name" required
+          placeholder="Jane Appleseed">
+        <p *ngIf="!nameModel.valid && nameModel.touched">This field is required</p>
+      </div>
+      <!-- input for the client email -->
+      <div class="form-input">
+        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="email">Email Address</label>
+        <input [(ngModel)]="email" #emailModel="ngModel" type="email" id="email" name="email" required
+          placeholder="email@example.com" [pattern]="emailPattern">
+        <p *ngIf="!emailModel.valid && emailModel.touched && !emailModel.dirty">This field is required</p>
+        <p *ngIf="!emailModel.valid && emailModel.touched && emailModel.dirty">Please enter a valid email address</p>
+      </div>
+      <!-- input for the client message -->
+      <div class="form-input">
+        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="message">Message</label>
+        <textarea id="message" [(ngModel)]="message" #messageModel="ngModel" name="message" required
+          placeholder="How can I help?" minlength="10"></textarea>
+        <p *ngIf="!messageModel.valid && messageModel.touched">This field is required with minimal 10 words</p>
+      </div>
+      <!-- Button to submit the from. only open if form valid -->
+      <button type="submit" [ngClass]="{'invalid': !registerForm.valid}"
+        class="flex justify-center items-center gap-4 bg-primary-Dark-Blue hover:bg-primary-Cyan py-4 w-[200px] text-secondary-Very-Light-Grey uppercase transition-colors duration-300 button small-text">
+        <span *ngIf="emailSending[0]" class="email loader"></span>
+        Send email
+      </button>
+    </form>
+  </section>
+</main>

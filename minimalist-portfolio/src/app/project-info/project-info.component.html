@@ -1,0 +1,153 @@
+<main>
+
+  <section *ngIf="!projectLoaded; else loadedProject">
+    <article class="bg-primary-Dark-Blue">
+      <span class="loader project"></span>
+    </article>
+  </section>
+
+  <ng-template #loadedProject>
+
+    <section [@projectAnimation] *ngIf="!projectError; else failedProject">
+      <article class="mb-10 lg:mb-[115px]">
+        <figure class="bg-loading h-[180px] md:h-auto">
+          <a href="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg" data-lightbox="img mobile"
+            attr.data-title="{{project?.title}}" class="md:hidden">
+            <img src="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg"
+              alt="{{project?.title}} mobile hero image" class="w-full h-full">
+          </a>
+          <a href="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg" data-lightbox="img tablet"
+            attr.data-title="{{project?.title}}" class="md:block hidden lg:hidden">
+            <img src="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg"
+              alt="{{project?.title}} tablet hero image" class="w-full h-full">
+          </a>
+          <a href="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg" data-lightbox="img desktop"
+            attr.data-title="{{project?.title}}" class="lg:block hidden">
+            <img src="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg"
+              alt="{{project?.title}} desktop hero image" class="w-full h-full">
+          </a>
+        </figure>
+      </article>
+    </section>
+
+    <section *ngIf="!projectError" class="lg:gap-[125px] grid lg:grid-cols-2">
+      <article class="lg:max-w-[350px]">
+        <div class="mb-6 md:mb-8 lg:mb-12 line"></div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-1">
+          <h1>{{project?.title}}</h1>
+
+          <p class="md:row-span-2 lg:row-span-1 my-6 md:my-0 lg:mt-8 md:pl-8 lg:pl-0 description">{{project?.description}}</p>
+
+          <div class="md:mt-4">
+            <p class="tags">Interaction Design / Front End Development</p>
+            <p class="tags">{{project?.tags?.join(" / ")}}</p>
+            <button class="mt-6 md:mt-4 button secondary">visit website</button>
+          </div>
+        </div>
+        <div class="mt-6 md:mt-8 lg:mt-12 line"></div>
+      </article>
+
+      <article class="mt-10 lg:mt-0">
+        <h3>Project Background</h3>
+        <p class="mt-7 description">
+          This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice
+          building
+          websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the
+          website
+          should look at different screen sizes. Creating these projects has helped me refine my workflow and solve
+          real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my
+          style.
+        </p>
+        <h3 class="my-10">Static Previews</h3>
+        <figure class="mb-8">
+          <a class="md:hidden"
+            href="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+            data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 1">
+            <img class="w-full"
+              src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              alt="preview">
+          </a>
+          <a class="md:block hidden lg:hidden"
+            href="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+            data-lightbox="preview tablet" attr.data-title="{{project?.title}} preview 1">
+            <img class="w-full"
+              src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              alt="preview">
+          </a>
+          <a class="lg:block hidden"
+            href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+            data-lightbox="preview desktop" attr.data-title="{{project?.title}} preview 1">
+            <img class="w-full"
+              src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              alt="preview">
+          </a>
+        </figure>
+        <figure>
+          <a class="md:hidden"
+            href="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+            data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 2">
+            <img class="w-full"
+              src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              alt="preview">
+          </a>
+          <a class="md:block hidden lg:hidden"
+            href="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+            data-lightbox="preview tablet" attr.data-title="{{project?.title}} preview 2">
+            <img class="w-full"
+              src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              alt="preview">
+          </a>
+          <a class="lg:block hidden"
+            href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+            data-lightbox="preview desktop" attr.data-title="{{project?.title}} preview 2">
+            <img class="w-full"
+              src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              alt="preview">
+          </a>
+        </figure>
+      </article>
+    </section>
+
+
+
+    <section *ngIf="!projectError">
+      <article
+        class="grid grid-cols-2 mt-16 border-t border-t-primary-Grayish-Dark-Blue/10 border-b border-b-primary-Grayish-Dark-Blue/10">
+
+        <div (click)="resetInfo()"
+          class="flex md:flex-row flex-col md:justify-start md:items-center md:gap-8 py-6 border-r border-r-primary-Grayish-Dark-Blue/10 cursor-pointer"
+          routerLink="/project/{{projectBefore}}">
+          <img src="../../assets/images/icons/arrow-left.svg" alt="svg arrow left" class="max-w-2">
+          <div>
+            <h3 class="mt-4">{{projectBefore}}</h3>
+            <p class="text-primary-Grayish-Dark-Blue/60 description">Previous Project</p>
+          </div>
+        </div>
+
+        <div (click)="resetInfo()"
+          class="flex md:flex-row-reverse flex-col md:justify-start md:items-center md:gap-8 py-6 text-end cursor-pointer"
+          routerLink="/project/{{projectNext}}">
+          <img src="../../assets/images/icons/arrow-right.svg" alt="svg arrow right" class="ml-auto md:ml-0 max-w-2">
+          <div>
+            <h3 class="mt-4">{{projectNext}}</h3>
+            <p class="text-primary-Grayish-Dark-Blue/60 description">Next Project</p>
+          </div>
+        </div>
+
+      </article>
+    </section>
+  </ng-template>
+
+  <ng-template #failedProject>
+    <section>
+      <article class="text-center">
+        <h2>Failed to load projects</h2>
+        <p class="my-10 text-balance description">There was an error loading the project. Please try again later.</p>
+        <button class="button secondary" routerLink="/projects">Back to projects</button>
+      </article>
+    </section>
+  </ng-template>
+
+  <app-contact-me-link />
+</main>
