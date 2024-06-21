@@ -25,8 +25,17 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"],
-            "scripts": []
+            "styles": [
+              "src/styles.css",
+              "node_modules/lightbox2/dist/css/lightbox.css",
+              "primeng/resources/themes/mdc-light-indigo/theme.css",
+              "primeng/resources/primeng.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/lightbox2/dist/js/lightbox.js",
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import emailjs from 'emailjs-com';
 import { emailMessage } from '../Model/email.model';
 import { MessageService } from 'primeng/api';
-import { environment } from '../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
-  private pkey: string = environment.EMAILJS_PUBLIC_KEY;
-  private sKey: string = environment.EMAILJS_SERVICE_ID;
-  private tKey: string = environment.EMAILJS_TEMPLATE_ID;
+  private pkey: string = 'faIOzRWyYu1xzdu7D';
+  private sKey: string = 'service_1crqkun';
+  private tKey: string = 'template_q07z7yi';
 
   loading: boolean[] = [false];
 

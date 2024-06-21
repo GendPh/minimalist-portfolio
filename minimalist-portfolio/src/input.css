@@ -1,0 +1,231 @@
+/* npx tailwindcss -i ./src/input.css -o ./src/styles.css --watch */
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Public Sans', sans-serif;
+    @apply bg-secondary-Very-Light-Grey font-normal text-primary-Grayish-Dark-Blue;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Ibarra Real Nova', serif;
+    @apply font-bold text-primary-Grayish-Dark-Blue;
+  }
+
+  h1 {
+    @apply text-[50px] leading-[50px] tracking-[-0.45px];
+  }
+  h2 {
+    @apply text-[40px] leading-[42px] tracking-[-0.36px];
+  }
+  h3 {
+    @apply text-[32px] leading-[42px] tracking-[-0.29px] font-normal;
+  }
+
+  nav {
+    ul {
+      @apply flex flex-col gap-8 justify-center items-center uppercase text-secondary-Light-Grey small-text cursor-pointer;
+      & li.active {
+        @apply text-primary-Cyan font-bold;
+      }
+    }
+  }
+  header {
+    @apply bg-secondary-Very-Light-Grey sticky top-0 w-full z-50 p-8 md:p-10 md:py-12 flex justify-between gap-5 items-center max-w-[1111px] mx-auto;
+  }
+  main {
+    @apply px-8 md:px-10 min-h-[70vh] md:mt-10 max-w-[1111px] mx-auto;
+  }
+  #about-me {
+    scroll-margin-top: 100px;
+  }
+}
+@layer components {
+  .line {
+    @apply w-full h-[1px] bg-[#979797];
+  }
+  .description {
+    @apply text-[15px] leading-[30px];
+  }
+  .tags {
+    @apply text-[13px] leading-[30px] text-primary-Cyan;
+  }
+  .small-text {
+    @apply text-[12px] tracking-[2px];
+  }
+  #nav-toggle {
+    background-image: url('./assets/images/icons/hamburger.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply md:hidden w-6 h-4 transition-all duration-300 cursor-pointer;
+    &.open {
+      background-image: url('./assets/images/icons/close.svg');
+    }
+  }
+  #mobile-nav {
+    @apply bg-primary-Grayish-Dark-Blue fixed right-8 text-secondary-Light-Grey py-10 px-16 z-50 origin-top-right scale-0 transition-transform duration-300;
+    &.open {
+      @apply scale-100;
+      & + .bg-mobile-nav {
+        @apply pointer-events-auto;
+      }
+    }
+  }
+  .bg-mobile-nav {
+    @apply pointer-events-none fixed inset-0 z-40;
+  }
+  .button {
+    &.primary {
+      @apply w-[200px] flex items-center bg-primary-Dark-Blue text-secondary-Light-Grey transition-colors duration-300 hover:bg-primary-Cyan;
+
+      .img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./assets/images/icons/down-arrows.svg);
+        @apply w-10 aspect-square bg-black/20 transition-all duration-300;
+      }
+
+      &:hover .img {
+        background-image: url(./assets/images/icons/down-arrows-white.svg);
+      }
+
+      .content {
+        @apply flex-grow p-2 uppercase small-text text-center;
+      }
+    }
+    &.secondary {
+      @apply min-w-[202px] text-center p-3 border border-primary-Grayish-Dark-Blue uppercase small-text transition-colors duration-300 hover:bg-primary-Grayish-Dark-Blue hover:text-secondary-Light-Grey;
+    }
+    &.invalid {
+      @apply opacity-40 cursor-not-allowed;
+    }
+  }
+  #hero {
+    @apply grid gap-6 relative;
+    .hero-content {
+      @apply bg-secondary-Very-Light-Grey md:absolute md:bottom-0 md:left-0 max-w-[514px] md:text-balance md:pt-20 lg:max-w-[445px] lg:pr-10;
+    }
+  }
+  .loader {
+    &.project {
+      @apply block text-[50px] text-center text-secondary-Light-Grey p-10;
+      &:before {
+        content: '{';
+        display: inline-block;
+        animation: pulse 0.4s alternate infinite ease-in-out;
+      }
+      &:after {
+        content: '}';
+        display: inline-block;
+        animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
+      }
+    }
+    &.email {
+      width: 14px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      @apply border-[3px] border-white;
+      &::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 3px solid;
+        border-color: #ffffff transparent;
+      }
+    }
+  }
+  @keyframes pulse {
+    to {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .bg-loading {
+    animation: bgFadeInOut 0.5s infinite alternate;
+    @apply bg-primary-Grayish-Dark-Blue/10;
+  }
+
+  app-project-container {
+    &:nth-child(even) {
+      .project {
+        @apply md:flex-row-reverse lg:ml-auto;
+      }
+    }
+    .project {
+      animation: fadeIn 1s ease-in-out forwards;
+      /* @apply gap-8 md:gap-[69px] grid md:grid-cols-2 opacity-0; */
+      @apply flex flex-col md:flex-row justify-between items-center gap-8 opacity-0 md:gap-[69px] lg:max-w-[1015px] lg:w-fit;
+      figure {
+        @apply aspect-square md:flex justify-center items-center;
+        img {
+          animation: bgFadeInOut 0.5s infinite alternate;
+          @apply w-full h-full md:max-w-[339px] md:max-h-[314px] lg:max-w-[540px] lg:max-h-[500px]  bg-primary-Grayish-Dark-Blue/10;
+        }
+      }
+      .content {
+        @apply md:max-w-[281px] lg:max-w-[350px];
+      }
+    }
+  }
+  @keyframes bgFadeInOut {
+    0% {
+      @apply bg-primary-Grayish-Dark-Blue/10;
+    }
+    100% {
+      @apply bg-primary-Grayish-Dark-Blue/20;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .form-input {
+    @apply grid my-6 gap-2;
+    input,
+    textarea {
+      @apply bg-primary-Grayish-Dark-Blue/20 p-4 text-primary-Grayish-Dark-Blue outline outline-transparent outline-1 focus:outline-primary-Cyan;
+      &::placeholder {
+        @apply text-primary-Grayish-Dark-Blue/60;
+      }
+      &.ng-invalid.ng-touched {
+        @apply outline-secondary-Bright-Red outline-1 focus:outline-primary-Cyan;
+      }
+    }
+    p {
+      @apply text-[10px] lg:text-[12px] text-secondary-Bright-Red;
+    }
+  }
+}
