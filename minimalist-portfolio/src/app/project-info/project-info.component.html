@@ -1,4 +1,4 @@
-<main>
+<main class="md:mt-10">
 
   <section *ngIf="!projectLoaded; else loadedProject">
     <article class="bg-primary-Dark-Blue">
@@ -10,27 +10,25 @@
 
     <section [@projectAnimation] *ngIf="!projectError; else failedProject">
       <article class="mb-10 lg:mb-[115px]">
-        <figure class="bg-loading h-[180px] md:h-auto">
-          <a href="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg" data-lightbox="img mobile"
-            attr.data-title="{{project?.title}}" class="md:hidden">
+        <figure class="bg-loading  md:h-auto">
+          <a href="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg" data-lightbox="img mobile"
+            attr.data-title="{{project?.title}}">
+
             <img src="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} mobile hero image" class="w-full h-full">
-          </a>
-          <a href="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg" data-lightbox="img tablet"
-            attr.data-title="{{project?.title}}" class="md:block hidden lg:hidden">
+              alt="{{project?.title}} mobile hero image" class="w-full h-full img-mobile">
+
             <img src="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} tablet hero image" class="w-full h-full">
-          </a>
-          <a href="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg" data-lightbox="img desktop"
-            attr.data-title="{{project?.title}}" class="lg:block hidden">
+              alt="{{project?.title}} tablet hero image" class="w-full h-full img-tablet">
+
             <img src="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} desktop hero image" class="w-full h-full">
+              alt="{{project?.title}} desktop hero image" class="w-full h-full img-desktop">
+
           </a>
         </figure>
       </article>
     </section>
 
-    <section *ngIf="!projectError" class="lg:gap-[125px] grid lg:grid-cols-2">
+    <section [@projectAnimation] *ngIf="!projectError" class="lg:gap-[125px] grid lg:grid-cols-2">
       <article class="lg:max-w-[350px]">
         <div class="mb-6 md:mb-8 lg:mb-12 line"></div>
 
@@ -65,49 +63,38 @@
         </p>
         <h3 class="my-10">Static Previews</h3>
         <figure class="mb-8">
-          <a class="md:hidden"
-            href="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
             data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 1">
-            <img class="w-full"
+
+            <img class="w-full h-full img-mobile"
               src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
-              alt="preview">
-          </a>
-          <a class="md:block hidden lg:hidden"
-            href="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
-            data-lightbox="preview tablet" attr.data-title="{{project?.title}} preview 1">
-            <img class="w-full"
+              alt="preview {{project?.title}}">
+
+            <img class="w-full h-full img-tablet"
               src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
-              alt="preview">
-          </a>
-          <a class="lg:block hidden"
-            href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
-            data-lightbox="preview desktop" attr.data-title="{{project?.title}} preview 1">
-            <img class="w-full"
+              alt="preview {{project?.title}}">
+
+            <img class="w-full h-full img-desktop"
               src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
-              alt="preview">
+              alt="preview {{project?.title}}">
           </a>
         </figure>
+
         <figure>
-          <a class="md:hidden"
-            href="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
             data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 2">
-            <img class="w-full"
+
+            <img class="w-full h-full img-mobile"
               src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
-              alt="preview">
-          </a>
-          <a class="md:block hidden lg:hidden"
-            href="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
-            data-lightbox="preview tablet" attr.data-title="{{project?.title}} preview 2">
-            <img class="w-full"
+              alt="preview {{project?.title}}">
+
+            <img class="w-full h-full img-tablet"
               src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
-              alt="preview">
-          </a>
-          <a class="lg:block hidden"
-            href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
-            data-lightbox="preview desktop" attr.data-title="{{project?.title}} preview 2">
-            <img class="w-full"
+              alt="preview {{project?.title}}">
+
+            <img class="w-full h-full img-desktop"
               src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
-              alt="preview">
+              alt="preview {{project?.title}}">
           </a>
         </figure>
       </article>
@@ -115,7 +102,7 @@
 
 
 
-    <section *ngIf="!projectError">
+    <section [@projectAnimation] *ngIf="!projectError">
       <article
         class="grid grid-cols-2 mt-16 border-t border-t-primary-Grayish-Dark-Blue/10 border-b border-b-primary-Grayish-Dark-Blue/10">
 
@@ -144,7 +131,7 @@
   </ng-template>
 
   <ng-template #failedProject>
-    <section>
+    <section [@projectAnimation]>
       <article class="text-center">
         <h2>Failed to load projects</h2>
         <p class="my-10 text-balance description">There was an error loading the project. Please try again later.</p>

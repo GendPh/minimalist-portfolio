@@ -42,13 +42,22 @@
     @apply bg-secondary-Very-Light-Grey sticky top-0 w-full z-50 p-8 md:p-10 md:py-12 flex justify-between gap-5 items-center max-w-[1111px] mx-auto;
   }
   main {
-    @apply px-8 md:px-10 min-h-[70vh] md:mt-10 max-w-[1111px] mx-auto;
+    @apply px-8 md:px-10 min-h-[70vh]  max-w-[1111px] mx-auto;
   }
   #about-me {
     scroll-margin-top: 100px;
   }
 }
 @layer components {
+  .img-mobile {
+    @apply md:hidden;
+  }
+  .img-tablet {
+    @apply hidden md:block lg:hidden;
+  }
+  .img-desktop {
+    @apply hidden lg:block;
+  }
   .line {
     @apply w-full h-[1px] bg-[#979797];
   }
@@ -181,17 +190,20 @@
     }
     .project {
       animation: fadeIn 1s ease-in-out forwards;
-      /* @apply gap-8 md:gap-[69px] grid md:grid-cols-2 opacity-0; */
-      @apply flex flex-col md:flex-row justify-between items-center gap-8 opacity-0 md:gap-[69px] lg:max-w-[1015px] lg:w-fit;
+      @apply flex flex-col  md:flex-row justify-between  gap-8 opacity-0 md:gap-[69px] lg:max-w-[1015px] items-stretch lg:w-fit;
+
       figure {
         @apply aspect-square md:flex justify-center items-center;
+        a {
+          @apply lg:w-full lg:h-full max-w-[540px];
+        }
         img {
           animation: bgFadeInOut 0.5s infinite alternate;
-          @apply w-full h-full md:max-w-[339px] md:max-h-[314px] lg:max-w-[540px] lg:max-h-[500px]  bg-primary-Grayish-Dark-Blue/10;
+          @apply w-full h-full  bg-primary-Grayish-Dark-Blue/10 object-cover;
         }
       }
       .content {
-        @apply md:max-w-[281px] lg:max-w-[350px];
+        @apply md:max-w-[281px] lg:max-w-[350px] flex flex-col justify-between gap-6;
       }
     }
   }

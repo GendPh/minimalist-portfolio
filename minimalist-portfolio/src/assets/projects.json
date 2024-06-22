@@ -58,5 +58,20 @@
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "",
     "codeLink": "github.com"
+  },
+  {
+    "id": 4,
+    "title": "Designo",
+    "description": "This project required me to build a fully responsive multi page to the designs provided. I used Angular, along with Tailwind Css for the areas that required interactivity. Used Leaflet for the map section.",
+    "img": {
+      "name": "image-portfolio-designo",
+      "hero": "image-designo-hero",
+      "mobile": "../../assets/images/portfolio/mobile/",
+      "tablet": "../../assets/images/portfolio/tablet/",
+      "desktop": "../../assets/images/portfolio/desktop/"
+    },
+    "tags": ["Tailwind-Css", "Angular", "Leaflet"],
+    "link": "https://designo-frontendmento.netlify.app/",
+    "codeLink": "github.com"
   }
 ]

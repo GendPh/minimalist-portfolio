@@ -567,7 +567,6 @@ main{
 
 @media (min-width: 768px){
   main{
-    margin-top: 2.5rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -683,6 +682,38 @@ main{
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
+}
+
+@media (min-width: 768px){
+  .img-mobile{
+    display: none;
+  }
+}
+
+.img-tablet{
+  display: none;
+}
+
+@media (min-width: 768px){
+  .img-tablet{
+    display: block;
+  }
+}
+
+@media (min-width: 1024px){
+  .img-tablet{
+    display: none;
+  }
+}
+
+.img-desktop{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .img-desktop{
+    display: block;
+  }
 }
 
 .line{
@@ -1043,7 +1074,6 @@ app-project-container {
   }
   .project {
     animation: fadeIn 1s ease-in-out forwards
-    /* @apply gap-8 md:gap-[69px] grid md:grid-cols-2 opacity-0; */
   }
   .project{
     display: flex;
@@ -1052,7 +1082,7 @@ app-project-container {
     flex-direction: column;
   }
   .project{
-    align-items: center;
+    align-items: stretch;
   }
   .project{
     justify-content: space-between;
@@ -1100,6 +1130,19 @@ app-project-container {
       }
     }
     figure {
+      a{
+        max-width: 540px;
+      }
+      @media (min-width: 1024px){
+        a{
+          height: 100%;
+        }
+      }
+      @media (min-width: 1024px){
+        a{
+          width: 100%;
+        }
+      }
       img {
         animation: bgFadeInOut 0.5s infinite alternate;
       }
@@ -1112,26 +1155,22 @@ app-project-container {
       img{
         background-color: rgb(51 50 61 / 0.1);
       }
-      @media (min-width: 768px){
-        img{
-          max-height: 314px;
-        }
+      img{
+        -o-object-fit: cover;
+           object-fit: cover;
       }
-      @media (min-width: 768px){
-        img{
-          max-width: 339px;
-        }
-      }
-      @media (min-width: 1024px){
-        img{
-          max-height: 500px;
-        }
-      }
-      @media (min-width: 1024px){
-        img{
-          max-width: 540px;
-        }
-      }
+    }
+    .content{
+      display: flex;
+    }
+    .content{
+      flex-direction: column;
+    }
+    .content{
+      justify-content: space-between;
+    }
+    .content{
+      gap: 1.5rem;
     }
     @media (min-width: 768px){
       .content{
@@ -1332,10 +1371,6 @@ app-project-container {
   display: flex;
 }
 
-.table{
-  display: table;
-}
-
 .grid{
   display: grid;
 }
@@ -1346,10 +1381,6 @@ app-project-container {
 
 .aspect-square{
   aspect-ratio: 1 / 1;
-}
-
-.h-\[180px\]{
-  height: 180px;
 }
 
 .h-full{
@@ -1599,6 +1630,10 @@ app-project-container {
     margin-top: 0px;
   }
 
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-12{
     margin-top: 3rem;
   }
@@ -1707,10 +1742,6 @@ app-project-container {
     margin-bottom: 3rem;
   }
 
-  .lg\:mb-\[103px\]{
-    margin-bottom: 103px;
-  }
-
   .lg\:mb-\[115px\]{
     margin-bottom: 115px;
   }
@@ -1729,10 +1760,6 @@ app-project-container {
 
   .lg\:mt-8{
     margin-top: 2rem;
-  }
-
-  .lg\:mt-\[103px\]{
-    margin-top: 103px;
   }
 
   .lg\:mt-\[80px\]{
