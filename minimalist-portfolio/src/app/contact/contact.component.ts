@@ -7,6 +7,7 @@ import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { MessageService } from 'primeng/api';
+import { ScrollNavigationService } from '../../Service/scroll-navigation.service';
 
 
 
@@ -32,6 +33,7 @@ export class ContactComponent {
   // This constructor injects the EmailService to send emails.
   constructor(
     private emailService: EmailService,
+    private scrollNavigationService: ScrollNavigationService,
   ) { this.emailSending = this.emailService.loading; }
 
 
