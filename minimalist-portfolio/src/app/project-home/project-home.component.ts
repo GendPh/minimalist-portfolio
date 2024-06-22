@@ -31,6 +31,7 @@ export class ProjectHomeComponent implements OnInit, OnDestroy {
         {
           next: (result) => {
             this.projects = result;
+            window.scrollTo(0, 0);
           },
           error: () => {
             this.projectsError = true;
