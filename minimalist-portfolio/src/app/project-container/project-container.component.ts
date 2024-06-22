@@ -15,13 +15,6 @@ export class ProjectContainerComponent implements OnInit {
     id: 0,
     title: "Project Title",
     description: "Project description",
-    img: {
-      name: "Project Image",
-      hero: "Project Image",
-      mobile: "Project Image",
-      tablet: "Project Image",
-      desktop: "Project Image",
-    },
     tags: ["tag1", "tag2"],
     link: "Project Link",
     codeLink: "Project Code Link",

@@ -11,16 +11,16 @@
     <section [@projectAnimation] *ngIf="!projectError; else failedProject">
       <article class="mb-10 lg:mb-[115px]">
         <figure class="bg-loading  md:h-auto lg:h-[500px]">
-          <a href="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg" data-lightbox="img mobile"
-            attr.data-title="{{project?.title}}">
+          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+            data-lightbox="img mobile" attr.data-title="{{project?.title}}">
 
-            <img src="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg"
+            <img src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
               alt="{{project?.title}} mobile hero image" class="w-full object-cover h-full img-mobile">
 
-            <img src="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg"
+            <img src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
               alt="{{project?.title}} tablet hero image" class="w-full object-cover h-full img-tablet">
 
-            <img src="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg"
+            <img src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
               alt="{{project?.title}} desktop hero image" class="w-full object-cover h-full img-desktop">
 
           </a>
@@ -133,7 +133,7 @@
   <ng-template #failedProject>
     <section [@projectAnimation]>
       <article class="text-center">
-        <h2>Failed to load projects</h2>
+        <h2>Failed to load project</h2>
         <p class="my-10 text-balance description">There was an error loading the project. Please try again later.</p>
         <button class="button secondary" routerLink="/projects">Back to projects</button>
       </article>

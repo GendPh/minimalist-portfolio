@@ -5,10 +5,7 @@
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
     "img": {
       "name": "image-portfolio-manage",
-      "hero": "image-manage-hero",
-      "mobile": "../../assets/images/portfolio/mobile/",
-      "tablet": "../../assets/images/portfolio/tablet/",
-      "desktop": "../../assets/images/portfolio/desktop/"
+      "hero": "image-manage-hero"
     },
     "tags": ["Tailwind", "Angular", "Splidejs"],
     "link": "https://challenge-manage-frontendmentor.netlify.app",
@@ -20,10 +17,7 @@
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
     "img": {
       "name": "image-portfolio-bookmark",
-      "hero": "image-bookmark-hero",
-      "mobile": "../../assets/images/portfolio/mobile/",
-      "tablet": "../../assets/images/portfolio/tablet/",
-      "desktop": "../../assets/images/portfolio/desktop/"
+      "hero": "image-bookmark-hero"
     },
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "",
@@ -35,10 +29,7 @@
     "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
     "img": {
       "name": "image-portfolio-insure",
-      "hero": "image-insure-hero",
-      "mobile": "../../assets/images/portfolio/mobile/",
-      "tablet": "../../assets/images/portfolio/tablet/",
-      "desktop": "../../assets/images/portfolio/desktop/"
+      "hero": "image-insure-hero"
     },
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "",
@@ -50,10 +41,7 @@
     "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
     "img": {
       "name": "image-portfolio-fylo",
-      "hero": "image-fylo-hero",
-      "mobile": "../../assets/images/portfolio/mobile/",
-      "tablet": "../../assets/images/portfolio/tablet/",
-      "desktop": "../../assets/images/portfolio/desktop/"
+      "hero": "image-fylo-hero"
     },
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "",
@@ -65,10 +53,7 @@
     "description": "This project required me to build a fully responsive multi page to the designs provided. I used Angular, along with Tailwind Css for the areas that required interactivity. Used Leaflet for the map section.",
     "img": {
       "name": "image-portfolio-designo",
-      "hero": "image-designo-hero",
-      "mobile": "../../assets/images/portfolio/mobile/",
-      "tablet": "../../assets/images/portfolio/tablet/",
-      "desktop": "../../assets/images/portfolio/desktop/"
+      "hero": "image-designo-hero"
     },
     "tags": ["Tailwind-Css", "Angular", "Leaflet"],
     "link": "https://designo-frontendmento.netlify.app/",
