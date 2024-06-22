@@ -4,17 +4,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { EmailService } from '../../Service/email.service';
 import { emailMessage } from '../../Model/email.model';
 import { ToastModule } from 'primeng/toast';
-import { ButtonModule } from 'primeng/button';
-import { RippleModule } from 'primeng/ripple';
-import { MessageService } from 'primeng/api';
 import { ScrollNavigationService } from '../../Service/scroll-navigation.service';
-
-
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, ToastModule, ButtonModule, RippleModule],
+  imports: [CommonModule, FormsModule, ToastModule,],
   templateUrl: './contact.component.html',
 })
 // This component is responsible for sending emails to the destination email address.
