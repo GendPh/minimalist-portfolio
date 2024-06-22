@@ -44,7 +44,7 @@
             <p class="tags">Interaction Design / Front End Development</p>
             <p class="tags">{{project?.tags?.join(" / ")}}</p>
 
-            <a [href]="project?.link" class="block w-fit mt-6 md:mt-4 button secondary"
+            <a target="_blank" [href]="project?.link" class="block w-fit mt-6 md:mt-4 button secondary"
               [ngClass]="{'invalid pointer-events-none':project?.link == ''}">visit
               website</a>
           </div>
