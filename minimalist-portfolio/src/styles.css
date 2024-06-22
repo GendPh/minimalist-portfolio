@@ -1710,6 +1710,10 @@ app-project-container {
     gap: 69px;
   }
 
+  .md\:text-wrap{
+    text-wrap: wrap;
+  }
+
   .md\:text-balance{
     text-wrap: balance;
   }
@@ -1778,6 +1782,10 @@ app-project-container {
     height: 600px;
   }
 
+  .lg\:h-\[500px\]{
+    height: 500px;
+  }
+
   .lg\:w-\[540px\]{
     width: 540px;
   }
@@ -1790,6 +1798,22 @@ app-project-container {
     max-width: 100%;
   }
 
+  .lg\:max-w-\[534\]{
+    max-width: 534;
+  }
+
+  .lg\:max-w-\[534px\]{
+    max-width: 534px;
+  }
+
+  .lg\:max-w-\[504px\]{
+    max-width: 504px;
+  }
+
+  .lg\:max-w-\[404px\]{
+    max-width: 404px;
+  }
+
   .lg\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1800,6 +1824,15 @@ app-project-container {
 
   .lg\:gap-\[125px\]{
     gap: 125px;
+  }
+
+  .lg\:text-wrap{
+    text-wrap: wrap;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pl-0{

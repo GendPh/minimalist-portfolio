@@ -10,18 +10,18 @@
 
     <section [@projectAnimation] *ngIf="!projectError; else failedProject">
       <article class="mb-10 lg:mb-[115px]">
-        <figure class="bg-loading  md:h-auto">
+        <figure class="bg-loading  md:h-auto lg:h-[500px]">
           <a href="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg" data-lightbox="img mobile"
             attr.data-title="{{project?.title}}">
 
             <img src="../../assets/images/detail/mobile/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} mobile hero image" class="w-full h-full img-mobile">
+              alt="{{project?.title}} mobile hero image" class="w-full object-cover h-full img-mobile">
 
             <img src="../../assets/images/detail/tablet/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} tablet hero image" class="w-full h-full img-tablet">
+              alt="{{project?.title}} tablet hero image" class="w-full object-cover h-full img-tablet">
 
             <img src="../../assets/images/detail/desktop/{{project?.img?.hero}}@2x.jpg"
-              alt="{{project?.title}} desktop hero image" class="w-full h-full img-desktop">
+              alt="{{project?.title}} desktop hero image" class="w-full object-cover h-full img-desktop">
 
           </a>
         </figure>
