@@ -1232,6 +1232,10 @@ app-project-container {
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .absolute{
   position: absolute;
 }
@@ -1318,6 +1322,10 @@ app-project-container {
 
 .mt-\[115px\]{
   margin-top: 115px;
+}
+
+.block{
+  display: block;
 }
 
 .flex{

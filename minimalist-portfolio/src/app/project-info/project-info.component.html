@@ -43,8 +43,10 @@
           <div class="md:mt-4">
             <p class="tags">Interaction Design / Front End Development</p>
             <p class="tags">{{project?.tags?.join(" / ")}}</p>
-            <button class="mt-6 md:mt-4 button secondary" [ngClass]="{'invalid':project?.link == ''}">visit
-              website</button>
+
+            <a [href]="project?.link" class="block w-fit mt-6 md:mt-4 button secondary"
+              [ngClass]="{'invalid pointer-events-none':project?.link == ''}">visit
+              website</a>
           </div>
         </div>
         <div class="mt-6 md:mt-8 lg:mt-12 line"></div>
