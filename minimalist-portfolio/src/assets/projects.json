@@ -10,8 +10,8 @@
       "tablet": "../../assets/images/portfolio/tablet/",
       "desktop": "../../assets/images/portfolio/desktop/"
     },
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "link": "",
+    "tags": ["Tailwind", "Angular", "Splidejs"],
+    "link": "https://challenge-manage-frontendmentor.netlify.app",
     "codeLink": "github.com"
   },
   {
