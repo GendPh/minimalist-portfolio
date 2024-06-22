@@ -20,7 +20,7 @@ export class ProjectContainerComponent implements OnInit {
     codeLink: "Project Code Link",
   };
   @Input("GetProjectIndex") index: number = 0;
-  
+
   ngOnInit(): void {
     lightbox.option({
       'resizeDuration': 200,
