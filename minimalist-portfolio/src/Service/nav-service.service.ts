@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, effect, signal } from '@angular/core';
 
 
 @Injectable({
@@ -8,7 +8,11 @@ export class NavService {
 
   navOpenSignal = signal<boolean>(false);
 
-  constructor() { }
+  constructor() {
+    effect(() => {
+      this.navOpenSignal.update(() => false);
+    })
+  }
 
   closeNav() {
     this.navOpenSignal.update(() => false);
