@@ -1,30 +1,33 @@
-<article class="project" [style.animation-delay]="(index * 0.5) + 's'">
+<article
+  class="animate-fadeIn flex flex-col  md:flex-row justify-between  gap-8 opacity-0 md:gap-[69px] lg:max-w-[1015px] items-stretch lg:w-fit"
+  [ngClass]="{'md:flex-row-reverse lg:ml-auto': index % 2 !== 0}" [style.animation-delay]="(index * 0.5) + 's'">
 
-  <figure>
-    <a data-lightbox="img"
-      href="../../assets/images/portfolio/desktop/image-portfolio-{{project.title.toLowerCase()}}@2x.jpg"
-      data-title="{{project.title}}">
+  <figure class="aspect-square md:flex justify-center items-center">
+    <a class="lg:w-full lg:h-full max-w-[540px]" data-lightbox="img"
+      href="../../assets/images/portfolio/desktop/image-portfolio-{{project?.title?.toLowerCase()}}@2x.jpg"
+      data-title="{{project?.title}}">
 
-      <img src="../../assets/images/portfolio/mobile/image-portfolio-{{project.title.toLowerCase()}}@2x.jpg"
-        alt="{{project.title}} Preview" class="img-mobile" />
+      <img src="../../assets/images/portfolio/mobile/image-portfolio-{{project?.title?.toLowerCase()}}@2x.jpg"
+        alt="{{project?.title}} Preview" class="img-mobile w-full h-full object-cover" />
 
-      <img src="../../assets/images/portfolio/tablet/image-portfolio-{{project.title.toLowerCase()}}@2x.jpg"
-        alt="{{project.title}} Preview" class="img-tablet" />
+      <img src="../../assets/images/portfolio/tablet/image-portfolio-{{project?.title?.toLowerCase()}}@2x.jpg"
+        alt="{{project?.title}} Preview" class="img-tablet w-full h-full object-cover" />
 
-      <img src="../../assets/images/portfolio/desktop/image-portfolio-{{project.title.toLowerCase()}}@2x.jpg"
-        alt="{{project.title}} Preview" class="img-desktop" />
+      <img src="../../assets/images/portfolio/desktop/image-portfolio-{{project?.title?.toLowerCase()}}@2x.jpg"
+        alt="{{project?.title}} Preview" class="img-desktop w-full h-full object-cover" />
     </a>
   </figure>
 
-  <div class="content">
+  <div class="md:max-w-[281px] lg:max-w-[350px] flex flex-col justify-between gap-6">
+
     <div class="line"></div>
 
     <div>
-      <h2>{{project.title}}</h2>
+      <h2>{{project?.title}}</h2>
 
-      <p class="my-6 md:my-8 text-start description">{{project.description}}</p>
+      <p class="my-6 md:my-8 text-start description">{{project?.description}}</p>
 
-      <button [routerLink]="['/project',project.title]" class="button secondary">view project</button>
+      <button [routerLink]="['/project',project?.title]" class="button secondary">view project</button>
     </div>
 
     <div class="line"></div>

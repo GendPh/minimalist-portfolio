@@ -2,9 +2,7 @@
 
   <!-- Section loading while waits for the projects -->
   <section *ngIf="!projectsLoaded; else loadedProjects">
-    <article class="bg-primary-Dark-Blue">
-      <span class="loader project"></span>
-    </article>
+    <app-project-loader />
   </section>
 
   <!-- Section with the projects if no error happens -->

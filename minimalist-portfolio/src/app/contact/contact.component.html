@@ -18,11 +18,7 @@
           out
           my online profiles below and get in touch using the form.
         </p>
-        <div class="flex gap-4">
-          <img src="../../assets/images/icons/github.svg" alt="github svg" class="w-6 aspect-square">
-          <img src="../../assets/images/icons/twitter.svg" alt="twitter svg" class="w-6 aspect-square">
-          <img src="../../assets/images/icons/linkedin.svg" alt="linkedin svg" class="w-6 aspect-square">
-        </div>
+        <app-socials />
       </div>
     </div>
 
@@ -34,30 +30,31 @@
     <!-- Form for the client email -->
     <form #registerForm="ngForm" (ngSubmit)="sendEmail($event)">
       <!-- input for the client name -->
-      <div class="form-input lg:mt-0">
-        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="name">Name</label>
-        <input type="text" id="name" [(ngModel)]="name" #nameModel="ngModel" name="name" required
-          placeholder="Jane Appleseed">
+      <div class="form-input grid my-6 gap-2 lg:mt-0">
+        <label class="font-bold tags text-theme" for="name">Name</label>
+        <input class="p-4 outline outline-transparent bg-theme-reverse text-text-light bg-opacity-30 outline-1 focus:outline-text-accent" type="text" id="name"
+          [(ngModel)]="name" #nameModel="ngModel" name="name" required placeholder="Jane Appleseed">
         <p *ngIf="!nameModel.valid && nameModel.touched">This field is required</p>
       </div>
       <!-- input for the client email -->
-      <div class="form-input">
-        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="email">Email Address</label>
-        <input [(ngModel)]="email" #emailModel="ngModel" type="email" id="email" name="email" required
-          placeholder="email@example.com" [pattern]="emailPattern">
+      <div class="form-input grid my-6 gap-2">
+        <label class="font-bold tags text-theme" for="email">Email Address</label>
+        <input class="p-4 outline outline-transparent bg-theme-reverse text-text-light bg-opacity-30 outline-1 focus:outline-text-accent" [(ngModel)]="email"
+          #emailModel="ngModel" type="email" id="email" name="email" required placeholder="email@example.com"
+          [pattern]="emailPattern">
         <p *ngIf="!emailModel.valid && emailModel.touched && !emailModel.dirty">This field is required</p>
         <p *ngIf="!emailModel.valid && emailModel.touched && emailModel.dirty">Please enter a valid email address</p>
       </div>
       <!-- input for the client message -->
-      <div class="form-input">
-        <label class="font-bold text-primary-Grayish-Dark-Blue tags" for="message">Message</label>
-        <textarea id="message" [(ngModel)]="message" #messageModel="ngModel" name="message" required
+      <div class="form-input grid my-6 gap-2">
+        <label class="font-bold tags text-theme" for="message">Message</label>
+        <textarea class="p-4 outline outline-transparent bg-theme-reverse text-text-light bg-opacity-30 outline-1 focus:outline-text-accent" id="message" [(ngModel)]="message" #messageModel="ngModel" name="message" required
           placeholder="How can I help?" minlength="10"></textarea>
         <p *ngIf="!messageModel.valid && messageModel.touched">This field is required with minimal 10 words</p>
       </div>
       <!-- Button to submit the from. only open if form valid -->
       <button type="submit" [ngClass]="{'invalid': !registerForm.valid}"
-        class="flex justify-center items-center gap-4 bg-primary-Dark-Blue hover:bg-primary-Cyan py-4 w-[200px] text-secondary-Very-Light-Grey uppercase transition-colors duration-300 button small-text">
+        class="flex justify-center items-center gap-4 py-4 w-[200px] uppercase transition-colors duration-300 button btn-border-theme small-text">
         <span *ngIf="emailSending[0]" class="email loader"></span>
         Send email
       </button>

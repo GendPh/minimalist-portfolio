@@ -1,41 +1,33 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
+import { NavService } from '../../Service/nav-service.service';
+import { CommonModule } from '@angular/common';
+import { MobileNavComponent } from '../mobile-nav/mobile-nav.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    CommonModule,
+    ToggleThemeComponent,
+    MobileNavComponent
+  ],
   templateUrl: './header.component.html',
-  styles: ``
 })
 export class HeaderComponent {
-  @ViewChild('navBtnToggle') navBtnToggle: ElementRef | undefined;
-  @ViewChild('navMobile') navMobile: ElementRef | undefined;
+  navOpen: boolean = false;
 
-  toggleNavBar() {
-    const body = document.querySelector('body');
+  constructor(public navService: NavService) { }
 
-    if (this.navBtnToggle && this.navMobile && body) {
-      if (this.navBtnToggle.nativeElement.classList.contains('open')) {
-        this.navBtnToggle.nativeElement.classList.remove('open');
-        this.navMobile.nativeElement.classList.remove('open');
-        body.classList.remove('overflow-hidden');
-      } else {
-        this.navBtnToggle.nativeElement.classList.add('open');
-        this.navMobile.nativeElement.classList.add('open');
-        body.classList.add('overflow-hidden');
-      }
-    }
+  toggleNav() {
+    this.navService.toggleNav();
   }
 
-  closeNavBar() {
-    const body = document.querySelector('body');
-
-    if (this.navBtnToggle && this.navMobile && body) {
-      body.classList.remove('overflow-hidden');
-      this.navBtnToggle.nativeElement.classList.remove('open');
-      this.navMobile.nativeElement.classList.remove('open');
-    }
+  closeNav() {
+    this.navService.closeNav();
   }
 
 }

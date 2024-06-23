@@ -1,0 +1,20 @@
+<nav id="mobile-nav" [ngClass]="{'open':navService.navOpenSignal()}"
+  class="text-theme-reverse bg-theme-reverse flex flex-col gap-8 items-center">
+
+  <ul class="flex flex-col gap-8 justify-center items-center uppercase small-text">
+    <li routerLink="/" routerLinkActive="text-text-accent font-bold" [routerLinkActiveOptions]="{exact: true}"
+      (click)="closeNav()">
+      home
+    </li>
+    <li (click)="closeNav()" routerLink="/projects" routerLinkActive="text-text-accent font-bold">
+      portfolio
+    </li>
+    <li (click)="closeNav()" routerLink="/contact" routerLinkActive="text-text-accent font-bold">
+      contact me
+    </li>
+  </ul>
+
+  <app-toggle-theme />
+</nav>
+
+<div (click)="closeNav()" id="bg-mobile-nav" class="pointer-events-none fixed inset-0 z-40"></div>

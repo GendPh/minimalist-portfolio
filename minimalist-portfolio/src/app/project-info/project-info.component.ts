@@ -7,6 +7,7 @@ import { ContactMeLinkComponent } from '../contact-me-link/contact-me-link.compo
 import { CommonModule } from '@angular/common';
 import { projectAnimation } from '../../Animation/projects.animation';
 import { Title } from '@angular/platform-browser';
+import { ProjectLoaderComponent } from '../project-loader/project-loader.component';
 
 declare var lightbox: any;
 
@@ -14,7 +15,7 @@ declare var lightbox: any;
 @Component({
   selector: 'app-project-info',
   standalone: true,
-  imports: [RouterLink, ContactMeLinkComponent, CommonModule],
+  imports: [RouterLink, ContactMeLinkComponent, CommonModule, ProjectLoaderComponent],
   templateUrl: './project-info.component.html',
   animations: [projectAnimation],
 })
@@ -37,7 +38,7 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
       'resizeDuration': 200,
       'wrapAround': true
     });
-    
+
     this.route.params.subscribe((params) => {
       const projectName = params['name'];
       this.titleService.setTitle(`Project: ${projectName}`);

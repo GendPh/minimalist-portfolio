@@ -1,31 +1,26 @@
 <main class="md:mt-10">
 
   <section *ngIf="!projectLoaded; else loadedProject">
-    <article class="bg-primary-Dark-Blue">
-      <span class="loader project"></span>
-    </article>
+    <app-project-loader />
   </section>
 
   <ng-template #loadedProject>
 
-    <section [@projectAnimation] *ngIf="!projectError; else failedProject">
-      <article class="mb-10 lg:mb-[115px]">
-        <figure class="bg-loading  md:h-auto lg:h-[500px]">
-          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
-            data-lightbox="img mobile" attr.data-title="{{project?.title}}">
+    <section [@projectAnimation] *ngIf="!projectError; else failedProject" class="mb-10 lg:mb-[115px]">
+      <figure class=" md:h-auto lg:h-[500px]">
+        <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+          data-lightbox="img mobile" attr.data-title="{{project?.title}}">
 
-            <img src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
-              alt="{{project?.title}} mobile hero image" class="w-full object-cover h-full img-mobile">
+          <img src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+            alt="{{project?.title}} mobile hero image" class="w-full object-cover h-full img-mobile">
 
-            <img src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
-              alt="{{project?.title}} tablet hero image" class="w-full object-cover h-full img-tablet">
+          <img src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+            alt="{{project?.title}} tablet hero image" class="w-full object-cover h-full img-tablet">
 
-            <img src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
-              alt="{{project?.title}} desktop hero image" class="w-full object-cover h-full img-desktop">
-
-          </a>
-        </figure>
-      </article>
+          <img src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+            alt="{{project?.title}} desktop hero image" class="w-full object-cover h-full img-desktop">
+        </a>
+      </figure>
     </section>
 
     <section [@projectAnimation] *ngIf="!projectError" class="lg:gap-[125px] grid lg:grid-cols-2">
@@ -39,8 +34,8 @@
             {{project?.description}}</p>
 
           <div class="md:mt-4">
-            <p class="tags">Interaction Design / Front End Development</p>
-            <p class="tags">{{project?.tags?.join(" / ")}}</p>
+            <p class="tags text-text-accent">Interaction Design / Front End Development</p>
+            <p class="tags text-text-accent">{{project?.tags?.join(" / ")}}</p>
 
             <a target="_blank" [href]="project?.link" class="block w-fit mt-6 md:mt-4 button secondary"
               [ngClass]="{'invalid pointer-events-none':project?.link == ''}">visit
@@ -100,33 +95,37 @@
       </article>
     </section>
 
+    <section [@projectAnimation] *ngIf="!projectError"
+      class="grid grid-cols-2 mt-16 border-t border-t-bg-theme border-b border-b-bg-theme">
 
+      <div (click)="resetInfo()"
+        class="flex md:flex-row flex-col md:justify-start md:items-center md:gap-8 py-6 border-r border-r-bg-theme cursor-pointer"
+        routerLink="/project/{{projectBefore}}">
 
-    <section [@projectAnimation] *ngIf="!projectError">
-      <article
-        class="grid grid-cols-2 mt-16 border-t border-t-primary-Grayish-Dark-Blue/10 border-b border-b-primary-Grayish-Dark-Blue/10">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16">
+          <path fill="none" stroke="currentColor" d="M9 0L1 8l8 8" />
+        </svg>
 
-        <div (click)="resetInfo()"
-          class="flex md:flex-row flex-col md:justify-start md:items-center md:gap-8 py-6 border-r border-r-primary-Grayish-Dark-Blue/10 cursor-pointer"
-          routerLink="/project/{{projectBefore}}">
-          <img src="../../assets/images/icons/arrow-left.svg" alt="svg arrow left" class="max-w-2">
-          <div>
-            <h3 class="mt-4">{{projectBefore}}</h3>
-            <p class="text-primary-Grayish-Dark-Blue/60 description">Previous Project</p>
-          </div>
+        <div>
+          <h3 class="mt-4">{{projectBefore}}</h3>
+          <p class="description">Previous Project</p>
         </div>
+      </div>
 
-        <div (click)="resetInfo()"
-          class="flex md:flex-row-reverse flex-col md:justify-start md:items-center md:gap-8 py-6 text-end cursor-pointer"
-          routerLink="/project/{{projectNext}}">
-          <img src="../../assets/images/icons/arrow-right.svg" alt="svg arrow right" class="ml-auto md:ml-0 max-w-2">
-          <div>
-            <h3 class="mt-4">{{projectNext}}</h3>
-            <p class="text-primary-Grayish-Dark-Blue/60 description">Next Project</p>
-          </div>
+      <div (click)="resetInfo()"
+        class="flex md:flex-row-reverse flex-col md:justify-start md:items-center md:gap-8 py-6 text-end cursor-pointer"
+        routerLink="/project/{{projectNext}}">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" class="ml-auto md:ml-0">
+          <path fill="transparent" stroke="currentColor" d="M1 0l8 8-8 8" />
+        </svg>
+
+        <div>
+          <h3 class="mt-4">{{projectNext}}</h3>
+          <p class="description">Next Project</p>
         </div>
+      </div>
 
-      </article>
     </section>
   </ng-template>
 

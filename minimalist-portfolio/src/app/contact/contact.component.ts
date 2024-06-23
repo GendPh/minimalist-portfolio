@@ -5,11 +5,12 @@ import { EmailService } from '../../Service/email.service';
 import { emailMessage } from '../../Model/email.model';
 import { ToastModule } from 'primeng/toast';
 import { ScrollNavigationService } from '../../Service/scroll-navigation.service';
+import { SocialsComponent } from '../socials/socials.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, ToastModule,],
+  imports: [CommonModule, FormsModule, ToastModule,SocialsComponent],
   templateUrl: './contact.component.html',
 })
 // This component is responsible for sending emails to the destination email address.
