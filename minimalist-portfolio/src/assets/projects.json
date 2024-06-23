@@ -20,7 +20,7 @@
     "title": "Insure",
     "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
     "tags": ["HTML", "CSS", "JavaScript"],
-    "link": "",
+    "link": "https://challenge-insure-frontendmentor.netlify.app/",
     "codeLink": "github.com"
   },
   {

@@ -13,7 +13,7 @@ export class ScrollNavigationService {
           window.scrollTo(0, 0);
         }
       });
-    }, 10);
+    }, 0);
   }
 
 }
