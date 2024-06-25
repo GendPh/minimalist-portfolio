@@ -1,20 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { EmailService } from '../../Service/email.service';
 import { emailMessage } from '../../Model/email.model';
 import { ToastModule } from 'primeng/toast';
-import { ScrollNavigationService } from '../../Service/scroll-navigation.service';
 import { SocialsComponent } from '../socials/socials.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, ToastModule,SocialsComponent],
+  imports: [CommonModule, FormsModule, ToastModule, SocialsComponent],
   templateUrl: './contact.component.html',
 })
 // This component is responsible for sending emails to the destination email address.
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   // This property is used to access the form in the HTML template.
   @ViewChild('registerForm') registerForm: NgForm | undefined;
   // These properties are used to store the client's name, email, and message.
@@ -29,12 +28,14 @@ export class ContactComponent {
   // This constructor injects the EmailService to send emails.
   constructor(
     private emailService: EmailService,
-    private scrollNavigationService: ScrollNavigationService,
   ) { this.emailSending = this.emailService.loading; }
 
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   // This method sends an email to the destination email address with the client's name, email, and message. 
-  sendEmail(e: Event) {
+  sendEmail() {
     // Prevent the form from submitting without validation
     if (!this.registerForm?.invalid) {
       // Create an email message object

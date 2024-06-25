@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ScrollNavigationService } from '../../Service/scroll-navigation.service';
 import { ProjectsService } from '../../Service/projects.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProjectModel } from '../../Model/project.model';
@@ -8,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { projectAnimation } from '../../Animation/projects.animation';
 import { Title } from '@angular/platform-browser';
 import { ProjectLoaderComponent } from '../project-loader/project-loader.component';
+
 
 declare var lightbox: any;
 
@@ -27,7 +27,6 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
   projectNext: string = '';
 
   constructor(
-    private scrollTop: ScrollNavigationService,
     private projectService: ProjectsService,
     private route: ActivatedRoute,
     private titleService: Title,
@@ -41,6 +40,7 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
 
     this.route.params.subscribe((params) => {
       const projectName = params['name'];
+      this.resetInfo();
       this.titleService.setTitle(`Project: ${projectName}`);
       this.SetProject(projectName);
     });
@@ -63,6 +63,7 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
           },
           complete: () => {
             this.projectLoaded = true;
+            window.scrollTo(0, 0);
           }
         }
       )

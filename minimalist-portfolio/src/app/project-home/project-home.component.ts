@@ -23,25 +23,32 @@ export class ProjectHomeComponent implements OnInit, OnDestroy {
   constructor(private projectService: ProjectsService,) { window.scrollTo(0, 0) }
 
   ngOnInit(): void {
+    this.resetInfo();
+
     setTimeout(() => {
       this.projectService.getProjects().subscribe(
         {
           next: (result) => {
             this.projects = result;
-            window.scrollTo(0, 0);
           },
           error: () => {
             this.projectsError = true;
           },
           complete: () => {
             this.projectsLoaded = true;
+            window.scrollTo(0, 0);
           }
         }
       )
     }, 500);
+
   }
 
   ngOnDestroy(): void {
+    this.resetInfo();
+  }
+
+  resetInfo() {
     this.projects = [];
     this.projectsLoaded = false;
     this.projectsError = false;
