@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
 
   constructor(public darkModeSignal: DarkModeService) { }
 
+  // This method is used to scroll to the top of the page when the component is initialized.
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
