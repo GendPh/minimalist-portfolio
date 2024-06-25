@@ -161,15 +161,9 @@
   .form-input {
     input,
     textarea {
-      &::placeholder {
-        @apply text-text-light;
-      }
       &.ng-invalid.ng-touched {
         @apply outline-text-red outline-1 focus:outline-text-accent;
       }
-    }
-    p {
-      @apply text-[10px] lg:text-[12px] text-text-red;
     }
   }
 }

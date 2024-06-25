@@ -514,7 +514,7 @@ h3{
   padding-right: 4rem;
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition-duration: 150ms;
   &.open{
     --tw-scale-x: 1;
     --tw-scale-y: 1;
@@ -1028,14 +1028,6 @@ main{
 .form-input {
   input,
     textarea {
-    &::-moz-placeholder{
-      --tw-text-opacity: 1;
-      color: rgb(51 50 61 / var(--tw-text-opacity));
-    }
-    &::placeholder{
-      --tw-text-opacity: 1;
-      color: rgb(51 50 61 / var(--tw-text-opacity));
-    }
     &.ng-invalid.ng-touched{
       outline-width: 1px;
     }
@@ -1044,18 +1036,6 @@ main{
     }
     &.ng-invalid.ng-touched:focus{
       outline-color: #5FB4A2;
-    }
-  }
-  p{
-    font-size: 10px;
-  }
-  p{
-    --tw-text-opacity: 1;
-    color: rgb(244 48 48 / var(--tw-text-opacity));
-  }
-  @media (min-width: 1024px){
-    p{
-      font-size: 12px;
     }
   }
 }
@@ -1370,6 +1350,10 @@ main{
   text-align: end;
 }
 
+.text-\[10px\]{
+  font-size: 10px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1386,6 +1370,11 @@ main{
 .text-text-light{
   --tw-text-opacity: 1;
   color: rgb(51 50 61 / var(--tw-text-opacity));
+}
+
+.text-text-red{
+  --tw-text-opacity: 1;
+  color: rgb(244 48 48 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1420,6 +1409,16 @@ main{
 
 .duration-300{
   transition-duration: 300ms;
+}
+
+.placeholder\:text-text-light::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(51 50 61 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-text-light::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(51 50 61 / var(--tw-text-opacity));
 }
 
 .hover\:fill-text-accent:hover{
@@ -1706,5 +1705,9 @@ main{
 
   .lg\:pr-10{
     padding-right: 2.5rem;
+  }
+
+  .lg\:text-\[12px\]{
+    font-size: 12px;
   }
 }
