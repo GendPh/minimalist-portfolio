@@ -9,7 +9,6 @@
   },
   {
     "id": 2,
-
     "title": "Hangman",
     "description": "This project required me to build a game to the designs provided. I used Angular, along with Tailwind and Typescript for the areas that required interactivity",
     "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
@@ -26,10 +25,10 @@
   },
   {
     "id": 3,
-    "title": "Fylo",
-    "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "link": "",
+    "title": "Countries",
+    "description": "This project was built in Angular and Tailwind. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
+    "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
+    "link": "https://frontendmentor-countries-challenge.netlify.app/",
     "codeLink": "github.com"
   },
   {
