@@ -1,42 +1,50 @@
 [
   {
     "id": 1,
+    "title": "Entertainment",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.Json-Server to be able to use the request like get and put. To enter this project you need to use the following credentials: email: test@tes.com password: password. You can register but take care of the data u put its not safe. You just need an valid email format and a simple password.",
+    "tags": ["Tailwind", "Angular", "Typescript", "Json-Server"],
+    "link": "https://frontendmentor-entertainment-challeng.netlify.app/trending",
+    "codeLink": "https://github.com/GendPh/entertainment-web-app"
+  },
+  {
+    "id": 2,
     "title": "Manage",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.I used SplideJs for the areas that required interactivity, such as the testimonial slider.",
     "tags": ["Tailwind", "Angular", "Splidejs"],
     "link": "https://challenge-manage-frontendmentor.netlify.app",
-    "codeLink": "github.com"
+    "codeLink": "https://github.com/GendPh/Manage-landing-page"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Hangman",
     "description": "This project required me to build a game to the designs provided. I used Angular, along with Tailwind and Typescript for the areas that required interactivity",
     "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
     "link": "https://frontendmentor-hangman-challenge.netlify.app",
-    "codeLink": "github.com"
+    "codeLink": "https://github.com/GendPh/hangman-game"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Insure",
     "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "https://challenge-insure-frontendmentor.netlify.app/",
-    "codeLink": "github.com"
+    "codeLink": "https://github.com/GendPh/insure-landing-page"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Countries",
     "description": "This project was built in Angular and Tailwind. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
     "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
     "link": "https://frontendmentor-countries-challenge.netlify.app/",
-    "codeLink": "github.com"
+    "codeLink": "https://github.com/GendPh/REST-Countries-API-with-color-theme-switcher"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Designo",
     "description": "This project required me to build a fully responsive multi page to the designs provided. I used Angular, along with Tailwind Css for the areas that required interactivity. Used Leaflet for the map section.",
     "tags": ["Tailwind-Css", "Angular", "Leaflet"],
     "link": "https://designo-frontendmento.netlify.app/",
-    "codeLink": "github.com"
+    "codeLink": "https://github.com/GendPh/Designo"
   }
 ]
