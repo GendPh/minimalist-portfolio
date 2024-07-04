@@ -46,5 +46,13 @@
     "tags": ["Tailwind-Css", "Angular", "Leaflet"],
     "link": "https://designo-frontendmento.netlify.app/",
     "codeLink": "https://github.com/GendPh/Designo"
+  },
+  {
+    "id": 7,
+    "title": "Planets",
+    "description": "In this challenge, i build out an 8-page fact site for all planets in our solar system. I use Json-Server to be able to use the request like get. I used Angular, along with Tailwind Css for the areas that required interactivity.",
+    "tags": ["Tailwind-Css", "Angular", "Json-Server", "Typescript"],
+    "link": "https://frontendmentor-planets-challenge.netlify.app/Mercury",
+    "codeLink": "https://github.com/GendPh/Planets-fact-site"
   }
 ]
