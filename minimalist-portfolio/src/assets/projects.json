@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Entertainment",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.Json-Server to be able to use the request like get and put. To enter this project you need to use the following credentials: email: test@tes.com password: password. You can register but take care of the data u put its not safe. You just need an valid email format and a simple password.",
     "tags": ["Tailwind", "Angular", "Typescript", "Json-Server"],
@@ -8,7 +7,13 @@
     "codeLink": "https://github.com/GendPh/entertainment-web-app"
   },
   {
-    "id": 2,
+    "title": "Photosnap",
+    "description": "In this challenge, i'll build a marketing site for a photo-sharing app. This was a perfect opportunity to put my CSS Grid skills to the test! This challenge was built in Angular, along with Tailwind Css for the areas that required interactivity. This challenge com from Frontend Mentor.",
+    "tags": ["Tailwind", "Angular", "Typescript"],
+    "link": "https://challenge-manage-frontendmentor.netlify.app",
+    "codeLink": "https://github.com/GendPh/Manage-landing-page"
+  },
+  {
     "title": "Manage",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.I used SplideJs for the areas that required interactivity, such as the testimonial slider.",
     "tags": ["Tailwind", "Angular", "Splidejs"],
@@ -16,7 +21,6 @@
     "codeLink": "https://github.com/GendPh/Manage-landing-page"
   },
   {
-    "id": 3,
     "title": "Hangman",
     "description": "This project required me to build a game to the designs provided. I used Angular, along with Tailwind and Typescript for the areas that required interactivity",
     "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
@@ -24,7 +28,6 @@
     "codeLink": "https://github.com/GendPh/hangman-game"
   },
   {
-    "id": 4,
     "title": "Insure",
     "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
     "tags": ["HTML", "CSS", "JavaScript"],
@@ -32,7 +35,6 @@
     "codeLink": "https://github.com/GendPh/insure-landing-page"
   },
   {
-    "id": 5,
     "title": "Countries",
     "description": "This project was built in Angular and Tailwind. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
     "tags": ["Angular", "Tailwind-Css", "Typescript", "uiball"],
@@ -40,7 +42,6 @@
     "codeLink": "https://github.com/GendPh/REST-Countries-API-with-color-theme-switcher"
   },
   {
-    "id": 6,
     "title": "Designo",
     "description": "This project required me to build a fully responsive multi page to the designs provided. I used Angular, along with Tailwind Css for the areas that required interactivity. Used Leaflet for the map section.",
     "tags": ["Tailwind-Css", "Angular", "Leaflet"],
@@ -48,7 +49,6 @@
     "codeLink": "https://github.com/GendPh/Designo"
   },
   {
-    "id": 7,
     "title": "Planets",
     "description": "In this challenge, i build out an 8-page fact site for all planets in our solar system. I use Json-Server to be able to use the request like get. I used Angular, along with Tailwind Css for the areas that required interactivity.",
     "tags": ["Tailwind-Css", "Angular", "Json-Server", "Typescript"],
