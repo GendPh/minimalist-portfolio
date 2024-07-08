@@ -10,8 +10,8 @@
     "title": "Photosnap",
     "description": "In this challenge, i'll build a marketing site for a photo-sharing app. This was a perfect opportunity to put my CSS Grid skills to the test! This challenge was built in Angular, along with Tailwind Css for the areas that required interactivity. This challenge com from Frontend Mentor.",
     "tags": ["Tailwind", "Angular", "Typescript"],
-    "link": "https://challenge-manage-frontendmentor.netlify.app",
-    "codeLink": "https://github.com/GendPh/Manage-landing-page"
+    "link": "https://frontendmentor-photosnap-challenge.netlify.app/",
+    "codeLink": "https://github.com/GendPh/Photosnap-multi-page-website"
   },
   {
     "title": "Manage",
