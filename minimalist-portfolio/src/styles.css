@@ -500,6 +500,13 @@ h3{
   letter-spacing: -0.29px;
 }
 
+h4 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: -0.29px;
+}
+
 #mobile-nav{
   position: fixed;
   right: 2rem;

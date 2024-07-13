@@ -1,6 +1,6 @@
 export interface ProjectModel {
-  id: number;
   title: string;
+  img: string;
   description: string;
   tags: string[];
   link: string;

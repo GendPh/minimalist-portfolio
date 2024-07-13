@@ -8,16 +8,16 @@
 
     <section [@projectAnimation] *ngIf="!projectError; else failedProject" class="mb-10 lg:mb-[115px]">
       <figure class=" md:h-auto lg:h-[500px]">
-        <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+        <a href="../../assets/images/detail/desktop/image-{{project?.img}}-hero@2x.jpg"
           data-lightbox="img mobile" attr.data-title="{{project?.title}}">
 
-          <img src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+          <img src="../../assets/images/detail/mobile/image-{{project?.img}}-hero@2x.jpg"
             alt="{{project?.title}} mobile hero image" class="w-full object-cover h-full img-mobile">
 
-          <img src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+          <img src="../../assets/images/detail/tablet/image-{{project?.img}}-hero@2x.jpg"
             alt="{{project?.title}} tablet hero image" class="w-full object-cover h-full img-tablet">
 
-          <img src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-hero@2x.jpg"
+          <img src="../../assets/images/detail/desktop/image-{{project?.img}}-hero@2x.jpg"
             alt="{{project?.title}} desktop hero image" class="w-full object-cover h-full img-desktop">
         </a>
       </figure>
@@ -60,37 +60,37 @@
         </p>
         <h3 class="my-10">Static Previews</h3>
         <figure class="mb-8">
-          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+          <a href="../../assets/images/detail/desktop/image-{{project?.img}}-preview-1@2x.jpg"
             data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 1">
 
             <img class="w-full h-full img-mobile"
-              src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              src="../../assets/images/detail/mobile/image-{{project?.img}}-preview-1@2x.jpg"
               alt="preview {{project?.title}}">
 
             <img class="w-full h-full img-tablet"
-              src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              src="../../assets/images/detail/tablet/image-{{project?.img}}-preview-1@2x.jpg"
               alt="preview {{project?.title}}">
 
             <img class="w-full h-full img-desktop"
-              src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-1@2x.jpg"
+              src="../../assets/images/detail/desktop/image-{{project?.img}}-preview-1@2x.jpg"
               alt="preview {{project?.title}}">
           </a>
         </figure>
 
         <figure>
-          <a href="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+          <a href="../../assets/images/detail/desktop/image-{{project?.img}}-preview-2@2x.jpg"
             data-lightbox="preview mobile" attr.data-title="{{project?.title}} preview 2">
 
             <img class="w-full h-full img-mobile"
-              src="../../assets/images/detail/mobile/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              src="../../assets/images/detail/mobile/image-{{project?.img}}-preview-2@2x.jpg"
               alt="preview {{project?.title}}">
 
             <img class="w-full h-full img-tablet"
-              src="../../assets/images/detail/tablet/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              src="../../assets/images/detail/tablet/image-{{project?.img}}-preview-2@2x.jpg"
               alt="preview {{project?.title}}">
 
             <img class="w-full h-full img-desktop"
-              src="../../assets/images/detail/desktop/image-{{project?.title?.toLowerCase()}}-preview-2@2x.jpg"
+              src="../../assets/images/detail/desktop/image-{{project?.img}}-preview-2@2x.jpg"
               alt="preview {{project?.title}}">
           </a>
         </figure>
@@ -109,7 +109,7 @@
         </svg>
 
         <div>
-          <h3 class="mt-4">{{projectBefore}}</h3>
+          <h4 class="mt-4">{{projectBefore}}</h4>
           <p class="description">Previous Project</p>
         </div>
       </div>
@@ -123,7 +123,7 @@
         </svg>
 
         <div>
-          <h3 class="mt-4">{{projectNext}}</h3>
+          <h4 class="mt-4">{{projectNext}}</h4>
           <p class="description">Next Project</p>
         </div>
       </div>
