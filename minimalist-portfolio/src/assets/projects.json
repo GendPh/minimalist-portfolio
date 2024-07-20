@@ -24,6 +24,14 @@
     "codeLink": "https://github.com/GendPh/Rock-Paper-Scissors-game"
   },
   {
+    "title": "GitHub User Search",
+    "img": "github-search",
+    "description": "This project required me to build an app that search user registered in GitHub. I used Angular, along with Css.",
+    "tags": ["Css", "Angular", "Typescript"],
+    "link": "https://frontendmentor-github-search.netlify.app/",
+    "codeLink": "https://github.com/GendPh/GitHub-user-search-app"
+  },
+  {
     "title": "Manage",
     "img": "manage",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.I used SplideJs for the areas that required interactivity, such as the testimonial slider.",
