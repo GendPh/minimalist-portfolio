@@ -1080,9 +1080,9 @@ main{
   z-index: 50;
 }
 
-.-mx-8{
-  margin-left: -2rem;
-  margin-right: -2rem;
+.-mx-\[100\%\]{
+  margin-left: -100%;
+  margin-right: -100%;
 }
 
 .mx-auto{
@@ -1103,11 +1103,6 @@ main{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.-mx-\[100\%\]{
-  margin-left: -100%;
-  margin-right: -100%;
 }
 
 .my-\[115px\]{
@@ -1231,6 +1226,10 @@ main{
 
 .max-w-\[540px\]{
   max-width: 540px;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 @keyframes fadeIn{
@@ -1494,24 +1493,19 @@ main{
     grid-row: span 2 / span 2;
   }
 
-  .md\:-mx-10{
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
-  }
-
   .md\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
   }
 
-  .md\:my-8{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
   .md\:my-24{
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
+
+  .md\:my-8{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .md\:mb-24{
@@ -1656,11 +1650,6 @@ main{
 @media (min-width: 1024px){
   .lg\:row-span-1{
     grid-row: span 1 / span 1;
-  }
-
-  .lg\:-mx-\[100\%\]{
-    margin-left: -100%;
-    margin-right: -100%;
   }
 
   .lg\:my-\[150px\]{
