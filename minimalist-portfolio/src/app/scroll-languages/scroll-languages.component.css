@@ -1,0 +1,17 @@
+
+.infinite-scroll app-languages{
+  animation: infiniteScroll 15s linear infinite alternate;
+}
+.infinite-scroll-reverse app-languages{
+  animation: infiniteScroll 15s linear infinite alternate-reverse;
+  margin-top: 32px;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

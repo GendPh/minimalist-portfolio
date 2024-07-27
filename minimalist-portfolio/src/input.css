@@ -8,7 +8,7 @@
 @layer base {
   body {
     font-family: 'Public Sans', sans-serif;
-    @apply bg-theme trans-bg text-theme font-normal;
+    @apply bg-theme trans-bg text-theme font-normal overflow-x-hidden;
   }
 
   h1,

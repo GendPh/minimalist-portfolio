@@ -471,6 +471,7 @@ body:is(.dark *){
 
 body {
   transition: background-color 0.3s;
+  overflow-x: hidden;
   font-weight: 400;
 }
 
@@ -1079,6 +1080,11 @@ main{
   z-index: 50;
 }
 
+.-mx-8{
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1097,6 +1103,16 @@ main{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.-mx-\[100\%\]{
+  margin-left: -100%;
+  margin-right: -100%;
+}
+
+.my-\[115px\]{
+  margin-top: 115px;
+  margin-bottom: 115px;
 }
 
 .mb-10{
@@ -1197,6 +1213,14 @@ main{
   width: 100%;
 }
 
+.min-w-20{
+  min-width: 5rem;
+}
+
+.max-w-20{
+  max-width: 5rem;
+}
+
 .max-w-\[1111px\]{
   max-width: 1111px;
 }
@@ -1279,16 +1303,12 @@ main{
   gap: 72px;
 }
 
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
 .text-balance{
   text-wrap: balance;
-}
-
-.rounded-lg{
-  border-radius: 0.5rem;
-}
-
-.rounded-full{
-  border-radius: 9999px;
 }
 
 .border-b{
@@ -1318,10 +1338,6 @@ main{
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.p-1{
-  padding: 0.25rem;
 }
 
 .p-4{
@@ -1478,6 +1494,11 @@ main{
     grid-row: span 2 / span 2;
   }
 
+  .md\:-mx-10{
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+
   .md\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -1486,6 +1507,11 @@ main{
   .md\:my-8{
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .md\:my-24{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .md\:mb-24{
@@ -1630,6 +1656,11 @@ main{
 @media (min-width: 1024px){
   .lg\:row-span-1{
     grid-row: span 1 / span 1;
+  }
+
+  .lg\:-mx-\[100\%\]{
+    margin-left: -100%;
+    margin-right: -100%;
   }
 
   .lg\:my-\[150px\]{

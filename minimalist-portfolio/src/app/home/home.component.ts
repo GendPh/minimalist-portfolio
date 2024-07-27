@@ -3,11 +3,12 @@ import { ContactMeLinkComponent } from '../contact-me-link/contact-me-link.compo
 
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { AboutMeSectionComponent } from '../about-me-section/about-me-section.component';
+import { ScrollLanguagesComponent } from '../scroll-languages/scroll-languages.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeSectionComponent, ContactMeLinkComponent],
+  imports: [HeroSectionComponent, AboutMeSectionComponent, ContactMeLinkComponent, ScrollLanguagesComponent],
   templateUrl: './home.component.html',
   styles: ``
 })
