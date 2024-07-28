@@ -43,7 +43,11 @@
   }
 
   main {
-    @apply px-8 md:px-10 min-h-[70vh] desktop-size;
+    @apply min-h-[70vh];
+  }
+
+  section {
+    @apply px-8 md:px-10 desktop-size;
   }
 
   #about-me {

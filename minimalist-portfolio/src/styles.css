@@ -536,16 +536,19 @@ h4 {
 }
 
 main{
+  min-height: 70vh;
+}
+
+section{
   margin-left: auto;
   margin-right: auto;
   max-width: 1111px;
-  min-height: 70vh;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 @media (min-width: 768px){
-  main{
+  section{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -1080,11 +1083,6 @@ main{
   z-index: 50;
 }
 
-.-mx-\[100\%\]{
-  margin-left: -100%;
-  margin-right: -100%;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1228,6 +1226,11 @@ main{
   max-width: 540px;
 }
 
+.max-w-max{
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
 @keyframes fadeIn{
   0%{
     opacity: 0;
@@ -1333,6 +1336,10 @@ main{
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-0{
+  padding: 0px;
 }
 
 .p-4{
@@ -1732,6 +1739,10 @@ main{
 
   .lg\:gap-\[125px\]{
     gap: 125px;
+  }
+
+  .lg\:p-0{
+    padding: 0px;
   }
 
   .lg\:pl-0{
