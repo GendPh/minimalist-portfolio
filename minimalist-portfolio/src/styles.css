@@ -1228,10 +1228,6 @@ main{
   max-width: 540px;
 }
 
-.max-w-full{
-  max-width: 100%;
-}
-
 @keyframes fadeIn{
   0%{
     opacity: 0;
@@ -1300,10 +1296,6 @@ main{
 
 .gap-\[72px\]{
   gap: 72px;
-}
-
-.overflow-x-hidden{
-  overflow-x: hidden;
 }
 
 .text-balance{
