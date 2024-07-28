@@ -1298,6 +1298,10 @@ main{
   gap: 72px;
 }
 
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
 .text-balance{
   text-wrap: balance;
 }
