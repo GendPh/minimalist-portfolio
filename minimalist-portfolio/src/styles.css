@@ -1321,6 +1321,11 @@ section{
   border-top-width: 1px;
 }
 
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30{
   --tw-bg-opacity: 0.3;
 }
@@ -1490,6 +1495,10 @@ section{
 
   .md\:left-0{
     left: 0px;
+  }
+
+  .md\:left-10{
+    left: 2.5rem;
   }
 
   .md\:row-span-2{
