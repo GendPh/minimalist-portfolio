@@ -40,7 +40,7 @@ export class ProjectHomeComponent implements OnInit, OnDestroy {
           }
         }
       )
-    }, 500);
+    }, 300);
 
   }
 

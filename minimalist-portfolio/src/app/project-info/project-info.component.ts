@@ -67,7 +67,7 @@ export class ProjectInfoComponent implements OnInit, OnDestroy {
           }
         }
       )
-    }, 500);
+    }, 300);
   }
 
   SetBeforeAndNext(name: string): void {
