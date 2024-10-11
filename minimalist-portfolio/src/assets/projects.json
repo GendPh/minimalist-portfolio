@@ -1,10 +1,18 @@
 [
   {
+    "title": "My Team",
+    "img": "myteam",
+    "description": "This challenge will give you a real glimpse into a professional front-end developer's workflow. It includes designs for a 3-page fully-functional website. I used Angular, along with TailwindCss. I use the  animate.css to create the animations.",
+    "tags": ["Tailwind", "Angular", "Animate.css", "Typescript"],
+    "link": "https://frontendmentor-myteam-challenge.netlify.app/",
+    "codeLink": "https://github.com/GendPh/myteam-multi-page-website"
+  },
+  {
     "title": "Entertainment",
     "img": "entertainment",
     "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.Json-Server to be able to use the request like get and put. To enter this project you need to use the following credentials: email: test@tes.com password: password. You can register but take care of the data u put its not safe. You just need an valid email format and a simple password.",
     "tags": ["Tailwind", "Angular", "Typescript", "Json-Server"],
-    "link": "https://frontendmentor-entertainment-challeng.netlify.app/trending",
+    "link": "https://frontendmentor-entertainment-challeng.netlify.app",
     "codeLink": "https://github.com/GendPh/entertainment-web-app"
   },
   {
