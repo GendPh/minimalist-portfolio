@@ -10,7 +10,7 @@
   {
     "title": "Entertainment",
     "img": "entertainment",
-    "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css.Json-Server to be able to use the request like get and put. To enter this project you need to use the following credentials: email: test@tes.com password: password. You can register but take care of the data u put its not safe. You just need an valid email format and a simple password.",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used Angular, along with Tailwind Css. Json-Server to be able to use the request like get and put. To enter this project you need to use the following credentials: email: test@tes.com password: password. You can register but take care of the data u put its not safe. You just need an valid email format and a simple password.",
     "tags": ["Tailwind", "Angular", "Typescript", "Json-Server"],
     "link": "https://frontendmentor-entertainment-challeng.netlify.app",
     "codeLink": "https://github.com/GendPh/entertainment-web-app"
